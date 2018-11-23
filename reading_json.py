@@ -50,4 +50,5 @@ def main():
     return True
 
 
-main()
+if (!main()):
+    sys.exit(-1) #so the caller of your program knows that your program didnt exit properly
