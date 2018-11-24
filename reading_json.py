@@ -31,7 +31,6 @@ def main():
     json_dict = json.loads(j_file)
 
     # get images
-
     imgs = []
     for panel in json_dict["damaged"]:
         imgs += [ panel['filename'] ]
@@ -41,7 +40,6 @@ def main():
     dest = cmd_line_args[3]
 
     # getting image file locations and moving them to a destination folder
-    #src_files = os.listdir(src)
     for file_name in imgs:
         full_file_name = os.path.join(src, file_name)
         if (os.path.isfile(full_file_name)):
