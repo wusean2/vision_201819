@@ -25,7 +25,7 @@ def main():
     print("copying images from " + cmd_line_args[2])
 
     # read input JSON file
-    j_file = (open(cmd_line_args[2])).read()
+    j_file = (open(cmd_line_args[1])).read()
 
     # parse JSON into a dictionary:
     json_dict = json.loads(j_file)
@@ -37,18 +37,20 @@ def main():
         imgs += [ panel['filename'] ]
 
     # source file and destination file locations
-    src = cmd_line_args[3]
-    dest = cmd_line_args[4]
+    src = cmd_line_args[2]
+    dest = cmd_line_args[3]
 
     # getting image file locations and moving them to a destination folder
-    src_files = os.listdir(src)
+    #src_files = os.listdir(src)
     for file_name in imgs:
         full_file_name = os.path.join(src, file_name)
         if (os.path.isfile(full_file_name)):
             shutil.copy(full_file_name, dest)
 
+    print("Success!")
+
     return True
 
 
-if (!main()):
-    sys.exit(-1) #so the caller of your program knows that your program didnt exit properly
+if main()==False:
+    sys.exit(-1) # so the caller of your program knows that your program didnt exit properly
