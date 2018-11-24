@@ -6,7 +6,6 @@ import sys
 def main():
 
     # getting cmd_line_args in format:
-    # "python3 reading_json.py file.json img_dir output_dir"
     cmd_line_args = sys.argv
     print(cmd_line_args)
     num_args = len(cmd_line_args)
@@ -45,5 +44,5 @@ def main():
     return True
 
 
-if main()==False:
+if !main():
     sys.exit(-1) # so the caller of your program knows that your program didnt exit properly
