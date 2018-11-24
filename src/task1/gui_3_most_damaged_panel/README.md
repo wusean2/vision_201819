@@ -7,9 +7,9 @@ This is a python script that takes in a json file containing the damaged files a
 - Python 3
 
 # Usage
-The input json file should contain the filenames (ex. `img_0124.jpg`). 
+The command line arguments are (1) the path of the json file, (2) the path of the folder directory containing the images, and (3) the path of the destination folder. The format is `python3 reading_json.py file.json img_dir output_dir`
 
-format:`python3 reading_json.py file.json img_dir output_dir`
+Note: The input json file should contain the filenames (ex. `img_0124.jpg`). 
 
 sample usage:
 `python3 img_filtering_from_json.py input.json /Users/Sean/GitHub/vision_201819/gui_3_most_damaged_panel/Images /Users/Sean/GitHub/vision_201819/gui_3_most_damaged_panel/GUI_Processing`
