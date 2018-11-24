@@ -3,11 +3,6 @@ import shutil
 import json
 import sys
 
-
-# FINISH TESTING & DEBUGGING
-#
-#
-
 def main():
 
     # getting cmd_line_args in format:
