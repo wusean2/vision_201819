@@ -47,7 +47,7 @@ def main():
         if (os.path.isfile(full_file_name)):
             shutil.copy(full_file_name, dest)
 
-    print("Success!")
+    print("Image files moved successfully")
 
     return True
 
